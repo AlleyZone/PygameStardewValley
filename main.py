@@ -1,5 +1,8 @@
 import pygame, sys
+from level import Level
 from settings import *
+from player import Player
+
 
 class Game:
     def __init__(self) -> None:
@@ -9,8 +12,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.level = Level()
 
-
-    def run (self):
+    def run(self):
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
